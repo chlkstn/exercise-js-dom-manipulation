@@ -41,7 +41,7 @@ newhome(home);
 
 let logotype = document.querySelector("header > img");
 
-logotype.classList.remove("logo");
+/* logotype.classList.remove("logo"); */
 
 let newele = document.createElement("a");
 
@@ -53,12 +53,49 @@ let newProduct = document.createElement("article");
 
 let newFigure = document.createElement("figure");
 
+let newImage = document.createElement("img");
+newImage.src = "img/hoodie-forrest.png";
+
+newFigure.appendChild(newImage);
+
 let newh2 = document.createElement("h2");
+newh2.innerHTML = "Sinus Hoodie";
 
 let newh3 = document.createElement("h3");
+newh3.innerHTML = "Forrest";
 
 let newp = document.createElement("p");
+newp.innerHTML =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.";
 
-main.appendChild(newProduct);
+let newBtn = document.createElement("button");
+newBtn.innerHTML = "ADD TO CART";
 
-newProduct.appendChild(newFigure, newh2, newh3, newp);
+let mainElem = document.querySelector("main");
+
+newProduct.append(newFigure, newh2, newh3, newp, newBtn);
+mainElem.appendChild(newProduct);
+
+const clickImage = document.querySelector(".logo");
+
+clickImage.addEventListener("click", function () {
+  console.log("found U");
+});
+
+const art1 = document
+  .querySelector(".art-1")
+  .addEventListener("click", function () {
+    console.log("im potato");
+  });
+
+const art2 = document
+  .querySelector(".art-2")
+  .addEventListener("click", function () {
+    console.log("Im fire");
+  });
+
+const art3 = document
+  .querySelector(".art-3")
+  .addEventListener("click", function () {
+    console.log("im water");
+  });
